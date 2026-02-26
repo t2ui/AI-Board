@@ -23,7 +23,7 @@
 ### 关于AI模型
 这个模型是在学校拍摄足够的图片，自己利用Colab GPU训练的实例分割模型。
 专注于**记事小黑板**轮廓识别！
-数据集开源在Roboflow上，模型成品在Release
+数据集开源在Roboflow上，模型成品在[Release](https://github.com/t2ui/AI-Board/releases/tag/Model)
 [Roboflow-小黑板轮廓分割](https://universe.roboflow.com/t2ui/small-blackboard-perspective-correction-i2a88)
 
 ### 关于 DirectML GPU加速
