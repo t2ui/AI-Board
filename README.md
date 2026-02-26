@@ -1,6 +1,8 @@
 ## AI-Board
 实现AI矫正桌面黑板/学校记事黑板，放大展示并可上传到服务器。
 
+<img width="321" height="500" alt="image" src="https://github.com/user-attachments/assets/b47d931a-0d80-4981-afd6-444f08208a87" />
+
 功能：
 - ONNX模型对黑板轮廓识别和透视变换
 - 支持DirectML GPU加速
