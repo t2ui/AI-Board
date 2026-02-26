@@ -23,8 +23,8 @@
 ### 关于AI模型
 这个模型是在学校拍摄足够的图片，自己利用Colab GPU训练的实例分割模型。
 专注于**记事小黑板**轮廓识别！
-数据集开源在Roboflow上，模型成品在[Release](https://github.com/t2ui/AI-Board/releases/tag/Model)
-[Roboflow-小黑板轮廓分割](https://universe.roboflow.com/t2ui/small-blackboard-perspective-correction-i2a88)
+数据集开源在[Roboflow](https://universe.roboflow.com/t2ui/small-blackboard-perspective-correction-i2a88)上，模型成品在[Release](https://github.com/t2ui/AI-Board/releases/tag/Model)
+
 
 ### 关于 DirectML GPU加速
 实现了GPU加速（通过onnx和DirectML），比纯用cpu能提速不少。这理论上适用于所有支持DirectX12的GPU，在软件设置中默认启用。
