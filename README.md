@@ -35,5 +35,40 @@
 实现了GPU加速（通过onnx和DirectML），比纯用cpu能提速不少。这理论上适用于所有支持DirectX12的GPU，在软件设置中默认启用。
 <img width="1380" height="136" alt="image" src="https://github.com/user-attachments/assets/418f31e6-5989-4167-b1b2-ee8816d97b85" />
 
+### 关于自动上传云服务接口需求
+当软件触发上传时，它会自动向你的服务器发起请求，具体格式如下：
+
+鉴权方法：通过Header
+
+Header 名称： X-Camera-Token
+
+Header 值： 就是你在设置中输入的任意字符串（如你设定的密码）
+
+---
+
+请求方法： POST
+
+请求路径 (URL)：软件会自动在你填写的地址后加上日期路由/api/camera/submit/YYYY-MM-DD。
+
+如果你在软件里填写 https://api.yourdomain.com，软件实际请求的完整 URL 会是：https://api.yourdomain.com/api/camera/submit/2026-02-27（末尾自动带上 YYYY-MM-DD 格式的日期）。
+
+请求类型 (Content-Type)： multipart/form-data
+
+表单字段 (Form Data Body)： 软件会通过表单提交三个字段，服务端需要解析它们：
+
+title (文本)：上传的触发原因。软件会发送 "Static Upload"（画面静止触发）、"Scheduled Upload"（定时触发）或 "Manual Upload"（手动点击）。
+
+text (文本)：触发时间描述。例如 "Triggered at 10:47:00"。
+
+image (文件)：核心的黑板图片文件。
+
+字段名 (Key)： image
+
+MIME 类型： image/jpeg
+
+文件名示例： capture_104700.jpg
+
+服务器应该鉴权，接收上传的图片并做好多版本存储，以供查看。
+
 ### 关于AI辅助
 本项目使用Gemini AI辅助完成。
